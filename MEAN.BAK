@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+int main()
+{
+int i,n;
+float std_div,mean,value,variance,sum=0,sumsqr=0,a[100];
+clrscr();
+printf("enter the value of n:");
+scanf("%d",&n);
+printf("\n enter the number \n");
+for(i=0;i<n;i++)
+{
+printf("\n number %d\n",i+1);
+scanf("%d",&a[i]);
+sum = sum+a[i];
+}
+mean=sum/n;
+sumsqr=0;
+for(i=0;i<=n;i++)
+{
+value = a[i]-mean;
+sumsqr = sumsqr+value*value;
+}
+variance=sumsqr/n;
+std_div=sqrt(variance);
+printf("\nmean of %d number =%f\n",n,mean);
+printf("\nvariance of %d number =%f\n",n,variance);
+printf("\nstd_div of %d numder =%f\n",n,std_div);
+getch();
+return 0;
+}
